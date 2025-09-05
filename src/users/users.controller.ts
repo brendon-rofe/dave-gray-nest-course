@@ -7,7 +7,7 @@ export class UsersController {
 
   @Get()
   findAll(@Query("role") role?: 'INTERN' | 'ENGINEER' | 'ADMIN') {
-    return { users: [], role }
+    return this.userService.findAll(role)
   }
 
   @Get("/:id")
