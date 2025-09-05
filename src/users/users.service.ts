@@ -11,4 +11,8 @@ export class UsersService {
     return users
   }
 
+  findById(id: string) {
+    return users.filter(user => user.id === id)
+  }
+
 }

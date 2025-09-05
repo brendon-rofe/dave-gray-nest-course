@@ -12,7 +12,7 @@ export class UsersController {
 
   @Get("/:id")
   findById(@Param("id") id: string) {
-    return { id }
+    return this.userService.findById(id)
   }
 
   @Post()
