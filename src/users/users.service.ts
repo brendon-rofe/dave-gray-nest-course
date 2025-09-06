@@ -15,4 +15,13 @@ export class UsersService {
     return users.filter(user => user.id === id)
   }
 
+  create(user: any) {
+    let usersArray = users
+    let newUserId = usersArray.length += 1
+    const newUserIdString = String(newUserId)
+    const newUser = {id: newUserIdString, ...user}
+    usersArray.push(newUser)
+    return usersArray
+  }
+
 }
